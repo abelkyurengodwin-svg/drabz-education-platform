@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DRABZ | Trading Education</title>
+
+    <style>
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 10, 0.55);
+    z-index: -1;
+}
+
+
+
+body {
+    margin: 0;
+    background: #0b1812;
+    color: white;
+}   
+
+
+
+header {
+    background: #0b1812;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #173b29;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #19e875;
+}
+
+.logo img {
+    width: clamp(45px, 8vw, 70px);
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+          
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #19e875;
+}
+
+.logo img {
+    width: clamp(45px, 8vw, 70px);
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #173b29;
+        }
+
+      
+
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #19e875;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(
+                rgba(7, 17, 13, 0.9),
+                rgba(7, 17, 13, 0.95)
+            );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #19e875;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b7c7bd;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #19e875;
+            color: #031009;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #19e875;
+            border: 1px solid #19e875;
+        }
+
+        .section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            color: #aebdb4;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #0c1c14;
+            padding: 30px 20px;
+            border: 1px solid #173b29;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            color: #19e875;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aebdb4;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #040b07;
+            color: #84958b;
+            border-top: 1px solid #173b29;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+    .about-founder {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-founder img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #19e875;
+    box-shadow: 0 0 20px rgba(25, 232, 117, 0.35);
+}
+
+.about-founder h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.about-founder p {
+    opacity: 0.8;
+}    }
+
+.about-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.about-person {
+    text-align: center;
+    width: 200px;
+}
+
+
+
+.about-person img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #19e875;
+    box-shadow: 0 0 20px rgba(25, 232, 117, 0.35);
+}
+
+.about-person h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.about-person p {
+    margin-top: 8px;
+    color: #b7c7bd;
+}   @media (max-width: 600px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 48px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+}
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 10, 0.65);
+    z-index: -1;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card-link .card {
+    cursor: pointer;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* Market videos */
+.market-ads-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.market-ad {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #19e875;
+    background: #0b1812;
+}
+
+.market-ad video {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Keep both videos side by side on phones too */
+@media (max-width: 700px) {
+    .market-ads-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .market-ad video {
+        height: 130px;
+    }
+}
+
+
+
+
+ 
+</style>
+</head>
+
+<body>
+<video autoplay muted loop playsinline id="background-video">
+    <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+</video>
+
+<div id="video-overlay"></div>
+
+
+
+<header>
+    <div class="logo"><img src="/static/images/drabz-logo.jpg" alt="DRABZ Logo"></div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#notes">Notes</a>
+        <a href="#about">About</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>
+            Learn <span>Trading</span>.
+            Build Your Skills.
+        </h1>
+
+        <p>
+            Welcome to DRABZ, a trading education platform
+            created to help you understand Forex, price action,
+            market structure and other important trading concepts.
+        </p>
+
+        <a href="#courses" class="btn">Explore Courses</a>
+
+        <a href="#notes" class="btn btn-outline">
+            Read Free Notes
+
+<div style="text-align:center; margin:20px 0;">
+    <a href="https://t.me/DRABZ_fx"
+       target="_blank"
+       style="display:inline-block;
+              background:#19e875;
+              color:#07130d;
+              padding:12px 22px;
+              border-radius:8px;
+              text-decoration:none;
+              font-weight:bold;">
+        📲 Join Our Telegram Channel
+    </a>
+</div>
+        </a>
+
+    </div>
+</section>
+
+<section class="section" id="courses">
+
+    <h2>Trading Courses</h2>
+
+    <p class="section-intro">
+        Learn through structured educational videos designed
+        to take you from the basics toward a deeper understanding
+        of the financial markets.
+    </p>
+
+
+   <div class="cards">
+        <div class="card">
+            <h3>Forex Basics</h3>
+            <p>
+                Learn what Forex is, currency pairs,
+                pips, spreads and other fundamental concepts.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Price Action</h3>
+            <p>
+                Understand how traders study price movement,
+                support, resistance and market structure.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Trading Strategy</h3>
+            <p>
+                Explore educational material about planning,
+                analysis and disciplined trading.
+            </p>
+        </div>
+
+    </div>
+
+<script>
+function toggleAuwalStory() {
+    const story = document.getElementById("auwal-story");
+    const button = document.getElementById("auwalReadMore");
+
+    if (story.style.display === "none") {
+        story.style.display = "block";
+        button.textContent = "Read Less";
+    } else {
+        story.style.display = "none";
+        button.textContent = "Read More";
+    }
+}
+</script>
+
+</section>
+
+<section class="section" id="notes">
+
+    <h2>Forex Notes</h2>
+
+    <p class="section-intro">
+        Read educational notes about Forex trading,
+        market terminology, analysis and risk management.
+    </p>
+
+    <div class="cards">
+
+
+<a href="/lesson/1" class="card-link">
+    <div class="card">
+        <h3>Introduction to Forex</h3>
+        <p>
+            Learn the basic concepts behind the foreign
+            exchange market.
+        </p>
+    </div>
+</a>
+
+
+        <div class="card">
+            <h3>Risk Management</h3>
+            <p>
+                Understand why managing trading risk is an
+                important part of learning to trade.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Market Analysis</h3>            <p>
+                Learn about different approaches traders use
+                when studying financial markets.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="market-ads">
+
+
+    <div class="market-ads-container">
+
+        <div class="market-ad">
+            <video autoplay muted loop playsinline controls>
+                <source src="{{ url_for('static', filename='ads/stock-market.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="market-ad">
+            <video autoplay muted loop playsinline controls>
+                <source src="{{ url_for('static', filename='ads/dynamic-stock.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+    </div> 
+
+</section>
+<section class="section" id="about">
+
+    <h2>About DRABZ</h2>
+
+    <p class="section-intro">
+        DRABZ is an educational platform created by two
+        trading enthusiasts who want to share knowledge
+        and learning resources about the financial markets.
+    </p>
+
+    <div class="about-team">
+
+        <div class="about-person">
+            <img src="/static/images/me.jpg" alt="DRABZ Founder">
+            <h3>DRABZ Founder</h3>
+            <p>Trading Educator & Founder</p>
+
+<div class="about-bio">
+    <h3>Abel Kyuren Godwin</h3>
+
+    <p>
+        I'm Abel Kyuren Godwin, 18 years old, from Nasarawa State,
+        and the founder of Abzilla FX Academy.
+    </p>
+
+    <div id="abel-story" style="display: none;">
+
+        <h4>How Did I Discover Trading? 🤔</h4>
+
+        <p>
+            I was living with my parents when I was in JSS3, while my
+            brother was living in Abuja and managing a laundry shop.
+            Later, my mother asked me to go to Abuja to live with my
+            brother and help him manage the laundry.
+        </p>
+
+        <p>
+            Everything was going well until my brother discovered
+            trading around July 2024. He came across one of Jeffrey
+            Benson's videos on YouTube, which motivated him to start
+            learning about Forex trading.
+        </p>
+
+        <p>
+            He started with a demo account, and about a month later,
+            he funded a real trading account with $50. At that time,
+            he was still learning and had not yet developed a proper
+            strategy or discipline.
+        </p>
+
+        <p>
+            Around June/July, he introduced me to trading, but at first
+            I wasn't really serious about it. A few days later, he played
+            one of Jeffrey Benson's videos, and I decided to watch.
+        </p>
+
+        <p>
+            After watching the video, I was amazed. I thought,
+            "Wow, is this how Forex trading works?" 😃
+        </p>
+
+        <p>
+            That moment motivated me to start learning about trading.
+            I began working on myself and went to YouTube to study
+            trading, price action, strategies, and the fundamentals
+            of the Forex market.
+        </p>
+
+        <p>
+            That was the beginning of my journey into trading.
+        </p>
+
+    </div>
+
+    <button onclick="toggleAbelStory()" id="abelReadMore">
+        Read More
+    </button>
+</div>
+
+<script>
+function toggleAbelStory() {
+    const story = document.getElementById("abel-story");
+    const button = document.getElementById("abelReadMore");
+
+    if (story.style.display === "none") {
+        story.style.display = "block";
+        button.textContent = "Read Less";
+    } else {
+        story.style.display = "none";
+        button.textContent = "Read More";
+    }
+}
+</script>
+        </div>
+
+
+
+
+<div class="about-person">
+    <img src="/static/images/friend.jpg" alt="Auwal Usman">
+    <h3>Auwal Usman</h3>
+    <p>Trading Educator & Co-Founder</p>
+
+    <div class="about-bio">
+        <p>
+            My name is Auwal Usman. I'm 18yrs old, I am the founder of
+            "Dr Dreamz FX Group" and from Kano State.
+        </p>
+
+        <div id="auwal-story" style="display: none;">
+
+            <h4>How Did I Discover Trading? 🤔</h4>
+
+            <p>
+                Well, my journey into trading started through my childhood
+                friend Jammy Forex, also known as Jammy FX Academy. Through
+                him, I was introduced to Forex trading and started developing
+                an interest in learning more about the financial markets.
+            </p>
+
+            <p>
+                As I continued learning, I also came across Jeffrey Benson,
+                whose teachings and content became another important influence
+                in my trading journey.
+            </p>
+
+            <p>
+                My journey with Abel Kyuren Godwin began through WhatsApp
+                because of our shared interest in trading. As we talked and
+                shared ideas, we realized that we both wanted to help beginners
+                understand trading before risking their money.
+            </p>
+
+            <p>
+                That idea eventually became DRABZ — a platform created to help
+                beginners learn the basics of trading, understand the risks,
+                and build knowledge before putting real money into the market.
+            </p>
+
+        </div>
+
+        <button onclick="toggleAuwalStory()" id="auwalReadMore">
+            Read More
+        </button>
+    </div>
+</div>
+
+
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 DRABZ. All rights reserved.</p>
+    <p>Trading education involves risk. Educational content is not financial advice.</p>
+
+</footer>
+
+
+<div id="drabz-chat">
+
+
+<button id="chat-toggle">🤖 DRABZ Assistant</button>
+    <div id="chat-box">
+        <div id="chat-header">DRABZ Assistant</div>
+
+        <div id="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 I'm the DRABZ Assistant. How can I help you?
+            </div>
+        </div>
+
+        <div id="chat-input-area">
+            <input
+                type="text"
+                id="chat-input"
+                placeholder="Type your message..."
+            >
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+</div>
+
+<style>
+#drabz-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+#chat-toggle {
+    background: #19e875;
+    color: #07120c;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#chat-box {
+    display: none;
+    width: 320px;
+    height: 420px;
+    background: #0b1812;
+    border: 1px solid #19e875;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#chat-header {
+    background: #0b3d2e;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+}
+
+#chat-messages {
+    height: 310px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    padding: 9px 11px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+.bot-message {
+    background: white;
+    color: black;
+}
+
+.user-message {
+    background: #164d35;
+    text-align: right;
+}
+
+#chat-input-area {
+    display: flex;
+    padding: 8px;
+    gap: 5px;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 9px;
+    border-radius: 8px;
+    border: none;
+}
+
+#chat-send {
+    background: #19e875;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+const chatToggle = document.getElementById("chat-toggle");
+const chatBox = document.getElementById("chat-box");
+const chatInput = document.getElementById("chat-input");
+const chatSend = document.getElementById("chat-send");
+const chatMessages = document.getElementById("chat-messages");
+
+chatToggle.addEventListener("click", function () {
+    chatBox.style.display =
+        chatBox.style.display === "none" ? "block" : "none";
+});
+
+async function sendMessage() {
+    const message = chatInput.value.trim();
+
+    if (!message) return;
+
+    chatMessages.innerHTML +=
+        '<div class="user-message">' + message + '</div>';
+
+    chatInput.value = "";
+
+    const formData = new FormData();
+    formData.append("message", message);
+
+    const response = await fetch("/chatbot", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await response.json();
+
+    chatMessages.innerHTML +=
+        '<div class="bot-message">' + data.reply + '</div>';
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+chatSend.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+</script>
+</body>
+</html>

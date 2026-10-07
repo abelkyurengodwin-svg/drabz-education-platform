@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 - Trendlines & Channels</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1812;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #19e875;
+        }
+
+        .card {
+            background: #0b3d2e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        .card h2 {
+            color: white;
+        }
+
+        .card p {
+            color: white;
+            line-height: 1.7;
+        }
+
+        .lesson-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #19e875;
+            color: #07130d;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/lessons" class="back-btn">← Back to Lessons</a>
+
+    <h1>📈 Lesson 5: Trendlines & Channels</h1>
+
+    <div class="card">
+        <h2>What Is a Trendline?</h2>
+
+        <img src="{{ url_for('static', filename='images/trendline.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A trendline is a line drawn on a price chart to connect
+            important highs or lows. It helps traders see the general
+            direction of the market.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📈 Uptrend Trendline</h2>
+
+        <img src="{{ url_for('static', filename='images/uptrend-trendline.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            An uptrend happens when price is generally making higher
+            highs and higher lows. An upward trendline can be drawn by
+            connecting important higher lows.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📉 Downtrend Trendline</h2>
+
+        <img src="{{ url_for('static', filename='images/downtrend-trendline.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A downtrend happens when price is generally making lower
+            highs and lower lows. A downward trendline can be drawn by
+            connecting important lower highs.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>What Is a Channel?</h2>
+
+        <img src="{{ url_for('static', filename='images/channel.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A channel is formed by two roughly parallel lines that
+            contain price movement. It can help traders identify the
+            direction and boundaries of a market move.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>What Is a Trendline Break?</h2>
+
+        <img src="{{ url_for('static', filename='images/trendline-break.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A trendline break happens when price moves through a
+            trendline. It may be a sign that the current market
+            movement is weakening or changing, but traders should
+            look for confirmation.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>💡 Important Note for Beginners</h2>
+
+        <p>
+            Trendlines are useful tools, but they are not perfect.
+            Price can temporarily break a trendline and continue in
+            the same direction. Always combine trendlines with other
+            forms of analysis.
+        </p>
+    </div>
+
+
+<form action="/complete-lesson/5" method="POST" style="text-align:center; margin-top:30px;">
+    <button type="submit"
+            style="background:#19e875; color:#07130d; border:none; padding:12px 20px; border-radius:8px; font-weight:bold; cursor:pointer;">
+        ✅ Mark Lesson 5 as Completed
+    </button>
+</form>
+</div>
+
+</body>
+</html>
+

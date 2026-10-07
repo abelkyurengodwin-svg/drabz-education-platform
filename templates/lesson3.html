@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 - Candlestick Basics</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1812;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #19e875;
+        }
+
+        .card {
+            background: #0b3d2e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        .card h2 {
+            color: white;
+        }
+
+        .card p {
+            color: white;
+            line-height: 1.7;
+        }
+
+        .lesson-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #19e875;
+            color: #07130d;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/lessons" class="back-btn">← Back to Lessons</a>
+
+    <h1>🕯️ Lesson 3: Candlestick Basics</h1>
+
+    <div class="card">
+        <h2>What Is a Candlestick?</h2>
+
+        <img src="{{ url_for('static', filename='images/candlesticks/what-is-candlestick.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A candlestick is a way of showing how price moved during a
+            specific period of time. It shows where price opened, where
+            it closed, and the highest and lowest prices reached.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🟢 Bullish Candle</h2>
+
+        <img src="{{ url_for('static', filename='images/candlesticks/bullish-candle.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A bullish candle means price closed higher than where it
+            opened. It shows that buyers were stronger during that period.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🔴 Bearish Candle</h2>
+
+        <img src="{{ url_for('static', filename='images/candlesticks/bearish-candle.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            A bearish candle means price closed lower than where it
+            opened. It shows that sellers were stronger during that period.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📌 Candle Body and Wicks</h2>
+
+        <img src="{{ url_for('static', filename='images/candlesticks/candle-body-wicks.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            The candle body shows the difference between the opening and
+            closing prices. The wicks show the highest and lowest prices
+            reached during that period.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>💡 Why Candlesticks Matter</h2>
+
+        <img src="{{ url_for('static', filename='images/candlesticks/why-candlesticks-matter.jpg') }}"
+             class="lesson-image">
+
+        <p>
+            Candlesticks help traders understand price movement and
+            recognize what buyers and sellers are doing in the market.
+        </p>
+    </div>
+
+
+<form action="/complete-lesson/3" method="POST" style="text-align:center; margin-top:30px;">
+    <button type="submit"
+            style="background:#19e875; color:#07130d; border:none; padding:12px 20px; border-radius:8px; font-weight:bold; cursor:pointer;">
+        ✅ Mark Lesson 3 as Completed
+    </button>
+</form>
+</div>
+
+</body>
+</html>

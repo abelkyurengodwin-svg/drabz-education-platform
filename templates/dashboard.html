@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRABZ Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07110d;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #0d1b15;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #00ff88;
+        }
+
+        .logout {
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            margin-bottom: 8px;
+        }
+
+        .welcome p {
+            color: #aaa;
+        }
+
+
+
+.progress-section {
+    background: #0b3d2e;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #19e875;
+}
+
+.progress-section h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.progress-section p {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #07110d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #19e875;
+}
+
+.progress-text {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.progress-lessons {
+    margin-top: 15px;
+}
+
+.progress-lessons div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    color: white;
+}
+
+.progress-lessons span {
+    color: #19e875;
+}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #0d1b15;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #183b2b;
+        }
+
+        .card h3 {
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DRABZ</h1>
+        <a class="logout" href="/logout">Logout</a>
+    </header>
+
+    <main>
+
+        <div class="welcome">
+            <h2>Welcome to your DRABZ Dashboard 👋</h2>
+            <p>Your trading education journey starts here.</p>
+        </div>
+
+
+
+<div class="progress-bar">
+    <div class="progress-fill" style="width: {{ progress }}%;"></div>
+</div>
+
+<p class="progress-text">
+    {{ progress }}% Completed
+    ({{ completed_count }}/{{ total_lessons }} lessons)
+</p>
+
+<div class="progress-lessons">
+
+    <div>
+        📘 Introduction to Forex
+        <span>
+            {% if 1 in completed_lessons %}✅ Completed{% else %}Not Started{% endif %}
+        </span>
+    </div>
+
+    <div>
+        📈 Market Structure
+        <span>
+            {% if 2 in completed_lessons %}✅ Completed{% else %}Not Started{% endif %}
+        </span>
+    </div>
+
+    <div>
+        🕯️ Candlestick Basics
+        <span>
+            {% if 3 in completed_lessons %}✅ Completed{% else %}Not Started{% endif %}
+        </span>
+    </div>
+
+    <div>
+        🎯 Support & Resistance
+        <span>
+            {% if 4 in completed_lessons %}✅ Completed{% else %}Not Started{% endif %}
+        </span>
+    </div>
+
+    <div>
+        📈 Trendlines & Channels
+        <span>
+            {% if 5 in completed_lessons %}✅ Completed{% else %}Not Started{% endif %}
+        </span>
+    </div>
+
+</div>
+
+
+
+</div>
+        <div class="cards">
+
+            <div class="card">
+    <h3>📚 Trading Lessons</h3>
+    <p>Learn the fundamentals of trading, price action, supply and demand, and more.</p>
+    <a href="/lessons" class="btn">Start Learning</a>
+</div>
+                
+
+            <div class="card">
+                <h3>📈 Price Action</h3>
+                <p>Study market structure, candlesticks, support and resistance.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Your Progress</h3>
+                <p>Your learning progress will appear here as we build DRABZ.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

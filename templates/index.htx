@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DRABZ | Trading Education</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07110d;
+            color: white;
+        }
+
+        header {
+            background: #0b1812;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #173b29;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #19e875;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #19e875;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(
+                rgba(7, 17, 13, 0.9),
+                rgba(7, 17, 13, 0.95)
+            );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #19e875;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b7c7bd;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #19e875;
+            color: #031009;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #19e875;
+            border: 1px solid #19e875;
+        }
+
+        .section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            color: #aebdb4;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #0c1c14;
+            padding: 30px 20px;
+            border: 1px solid #173b29;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            color: #19e875;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aebdb4;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #040b07;
+            color: #84958b;
+            border-top: 1px solid #173b29;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+    .about-founder {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-founder img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #19e875;
+    box-shadow: 0 0 20px rgba(25, 232, 117, 0.35);
+}
+
+.about-founder h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.about-founder p {
+    opacity: 0.8;
+}    }
+
+.about-team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.about-person {
+    text-align: center;
+    width: 200px;
+}
+
+.about-person img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #19e875;
+    box-shadow: 0 0 20px rgba(25, 232, 117, 0.35);
+}
+
+.about-person h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.about-person p {
+    margin-top: 8px;
+    color: #b7c7bd;
+}   
+ </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">DRABZ</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#notes">Notes</a>
+        <a href="#about">About</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>
+            Learn <span>Trading</span>.
+            Build Your Skills.
+        </h1>
+
+        <p>
+            Welcome to DRABZ, a trading education platform
+            created to help you understand Forex, price action,
+            market structure and other important trading concepts.
+        </p>
+
+        <a href="#courses" class="btn">Explore Courses</a>
+
+        <a href="#notes" class="btn btn-outline">
+            Read Free Notes
+        </a>
+
+    </div>
+</section>
+
+<section class="section" id="courses">
+
+    <h2>Trading Courses</h2>
+
+    <p class="section-intro">
+        Learn through structured educational videos designed
+        to take you from the basics toward a deeper understanding
+        of the financial markets.
+    </p>
+
+ 
+   <div class="cards">
+<div class="about-team">
+
+    <div class="about-person">
+        <img src="{{ url_for('static', filename='images/me.jpg') }}" alt="DRABZ Founder">
+        <h3>DRABZ Founder</h3>
+        <p>Trading Educator & Co-Founder</p>
+    </div>
+
+    <div class="about-person">
+
+
+
+<img src="{{ url_for('static', filename='images/me.jpg') }}" alt="DRABZ Founder">
+        <p>Trading Educator & Co-Founder</p>
+    </div>
+
+</div>
+        <div class="card">
+            <h3>Forex Basics</h3>
+            <p>
+                Learn what Forex is, currency pairs,
+                pips, spreads and other fundamental concepts.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Price Action</h3>
+            <p>
+                Understand how traders study price movement,
+                support, resistance and market structure.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Trading Strategy</h3>
+            <p>
+                Explore educational material about planning,
+                analysis and disciplined trading.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="notes">
+
+    <h2>Forex Notes</h2>
+
+    <p class="section-intro">
+        Read educational notes about Forex trading,
+        market terminology, analysis and risk management.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Introduction to Forex</h3>
+            <p>
+                Learn the basic concepts behind the foreign
+                exchange market.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Risk Management</h3>
+            <p>
+                Understand why managing trading risk is an
+                important part of learning to trade.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Market Analysis</h3>
+            <p>
+                Learn about different approaches traders use
+                when studying financial markets.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <h2>About DRABZ</h2>
+
+    <p class="section-intro">
+        DRABZ is an educational platform created by two
+        trading enthusiasts who want to share knowledge
+        and learning resources about the financial markets.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 DRABZ. All rights reserved.</p>
+    <p>Trading education involves risk. Educational content is not financial advice.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+.about-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.about-person {
+    text-align: center;
+    width: 220px;
+}
+
+.about-person img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.about-person h3 {
+    margin: 10px 0 5px;
+}
+
+.about-person p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* DRABZ team pictures - side by side */
+.about-team {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 20px !important;
+}
+
+.about-person {
+    flex: 0 0 220px !important;
+}
+
+
+.trading-rules {
+    color: #006400;
+}
